@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Commande - [Nom Produit]</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    img {
+      width: 250px;
+      height: 250px;
+      border-radius: 10px;
+      border: 3px solid #f0adad;
+      object-fit: cover;
+    }
+
+    form {
+      background-color: rgba(255, 255, 255, 0.7);
+      display: inline-block;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #ccc;
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #d14d9a;
+    }
+
+    input[type="radio"],
+    select {
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #d14d9a;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #b9357f;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Commander ce produit</h1>
+
+  <!-- صورة المنتج -->
+  <img src="images/hermes_shoes3.jpg" alt="Hermès Shoes 3">
+
+  <!-- نموذج الطلب -->
+  <form method="POST" action="commande.php">
+    <!-- معلومات مخفية تُرسل لـ commande.php -->
+    <input type="hidden" name="Vendeur_prod" value="FashionStore">
+    <input type="hidden" name="Prix_prod" value="370">
+    <input type="hidden" name="Ref_prod" value="HERMESSHOES003">
+
+    <!-- اختيار اللون -->
+    <label>Couleur :</label>
+    <input type="radio" name="Colr_prod" value="Rose" required> Rose
+    <input type="radio" name="Colr_prod" value="Noir"> Noir
+
+    <!-- اختيار الكمية -->
+    <label>Quantité :</label>
+    <select name="Qant_prod">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+
+    <br>
+    <button type="submit">Commander</button>
+  </form>
+
+</body>
+</html>

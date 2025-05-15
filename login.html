@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Page de connexion</title>
+  <style>
+    body {
+        background-image: url('images/back3.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    form {
+        width: 350px;
+        margin: 80px auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        text-align: left;
+        color: rgb(240, 160, 228);
+        margin-bottom: 5px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 15px;
+    }
+
+    button {
+        background-color: rgb(240, 160, 228);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+    button:hover {
+        background-color: rgb(220, 130, 210);
+    }
+
+    a {
+        color: purple;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- التعديل: form حقيقي مع method و action -->
+  <form method="POST" action="login.php" onsubmit="return Validation_login()">
+    <img src="images/login.jpg" alt="Login">
+    
+    <label for="mail">E-mail</label>
+    <input id="mail" name="Mail_Clt" type="email" placeholder="Entrer votre e-mail" required>
+    
+    <label for="password">Mot de passe</label>
+    <input id="password" name="Mot_Clt" type="password" placeholder="Entrer votre mot de passe" required>
+
+    <div>
+      <button type="submit">Envoyer</button>
+      <button type="reset">Annuler</button>
+    </div>
+
+    <p><a href="inscription.html" target="_blank">S'inscrire</a></p>
+  </form>
+
+  <script>
+    function Validation_login() {
+      const email = document.getElementById('mail').value;
+      const password = document.getElementById('password').value;
+
+      if (email.trim() === "" || password.trim() === "") {
+        alert("Veuillez remplir tous les champs.");
+        return false;
+      }
+
+      return true; // لا تضع alert هنا حتى يذهب إلى login.php
+    }
+  </script>
+
+</body>
+</html>

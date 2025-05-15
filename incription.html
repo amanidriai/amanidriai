@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Page d'inscription</title>
+  <style>
+    body {
+        background-image: url('images/back3.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    form {
+        width: 350px;
+        margin: 50px auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        text-align: left;
+        color: rgb(240, 160, 228);
+        margin-bottom: 5px;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 8px;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 15px;
+    }
+
+    .radio-group {
+        text-align: left;
+        margin-bottom: 15px;
+        color: rgb(240, 160, 228);
+    }
+
+    button {
+        background-color: rgb(240, 160, 228);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+    button:hover {
+        background-color: rgb(220, 130, 210);
+    }
+
+    a {
+        color: purple;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- النموذج المرتبط بـ inscription.php -->
+  <form method="POST" action="inscription.php">
+    <img src="images/login.jpg" alt="Inscription">
+
+    <label for="nom">Nom</label>
+    <input id="nom" name="No_Clt" type="text" required>
+
+    <label for="prenom">Prénom</label>
+    <input id="prenom" name="Pno_Clt" type="text" required>
+
+    <label for="age">Âge</label>
+    <input id="age" name="Age_Clt" type="number" required>
+
+    <label for="wilaya">Wilaya</label>
+    <input id="wilaya" name="Wi_Clt" type="text" required>
+
+    <label for="tel">Téléphone</label>
+    <input id="tel" name="Tel_Clt" type="number" required>
+
+    <label for="email">E-mail</label>
+    <input id="email" name="Mail_Clt" type="email" required>
+
+    <label for="adresse">Adresse</label>
+    <input id="adresse" name="Adr_Clt" type="text" required>
+
+    <label for="password">Mot de passe</label>
+    <input id="password" name="Mot_Clt" type="password" required>
+
+    <div class="radio-group">
+      Sexe:<br>
+      <input type="radio" name="Sexe_Clt" value="Homme" required> Homme
+      <input type="radio" name="Sexe_Clt" value="Femme"> Femme
+    </div>
+
+    <div>
+      <button type="submit">S'inscrire</button>
+      <button type="reset">Annuler</button>
+    </div>
+
+    <p><a href="login.html">Déjà inscrit ? Se connecter</a></p>
+  </form>
+
+</body>
+</html>

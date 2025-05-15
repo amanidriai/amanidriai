@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Order</title>
+  <style>
+    body {
+      background-color: #ffe4e1; /* خلفية وردية */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    table {
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .id {
+      font-size: large;
+      color: #000;
+    }
+    .myid {
+      font-size: small;
+    }
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 20%;
+      object-fit: cover;
+      border: 3px solid #f0adad;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: medium;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Product Order</h1>
+
+  <!-- بداية النموذج -->
+  <form method="POST" action="commande.php">
+    <table>
+      <tr>
+        <td rowspan="6">
+          <img src="images/ph 1.jpg" alt="Product Image">
+        </td>
+        <td class="id">Seller:</td>
+        <td class="myid">
+          <input type="text" name="Vendeur_prod" value="11TechBrothers" readonly>
+        </td>
+      </tr>
+      <tr>
+        <td class="id">Price:</td>
+        <td class="myid">
+          <input type="text" name="Prix_prod" value="11500" readonly>
+        </td>
+      </tr>
+      <tr>
+        <td class="id">Reference:</td>
+        <td class="myid">
+          <input type="text" name="Ref_prod" value="M20325" readonly>
+        </td>
+      </tr>
+      <tr>
+        <td class="id">Color:</td>
+        <td>
+          <input type="radio" name="Colr_prod" value="Gold"> Gold
+          <input type="radio" name="Colr_prod" value="Silver"> Silver
+        </td>
+      </tr>
+      <tr>
+        <td class="id">Quantity:</td>
+        <td>
+          <select name="Qant_prod">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;">
+          <button type="submit">Order Now</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <!-- نهاية النموذج -->
+
+</body>
+</html>
